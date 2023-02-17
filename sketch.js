@@ -220,7 +220,7 @@ function draw() {
     strokeWeight(4)
     fill("red")
     textSize(50)
-    if (mZ != 0 && mG !== 0) {
+    if (mZ !== 0 && mG !== 0) {
       text("Game Over", width / 2 - 100, height / 2);
     }
     else {
@@ -285,6 +285,9 @@ function reset() {
   nb = 100;
   lives = 3;
   nz = 0;
+  nG = 0;
+  mZ = 25;
+  mG = 25;
   zombieGroup.destroyEach();
   bulletGroup.destroyEach();
   player.x = 100;
